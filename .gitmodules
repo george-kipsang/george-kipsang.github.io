@@ -1,0 +1,3 @@
+[submodule "docs/writeups"]
+	path = docs/writeups
+	url = https://github.com/george-kipsang/ctf-writeups.git
