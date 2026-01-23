@@ -1,0 +1,56 @@
+site_name: Cybersecurity Portfolio
+site_description: "Ethical hacking writeups, CTF challenges, and cybersecurity notes."
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+        
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to hacker mode
+
+
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - header.autohide
+    - content.code.copy
+    - content.action.edit
+    - content.code.annotate
+    - navigation.top
+    - palette.toggle
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+  - Competitions:
+      - Overview: writeups/competitions/index.md
+
+  - Platforms:
+      - Overview: writeups/platforms/index.md
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+plugins:
+  - search 
