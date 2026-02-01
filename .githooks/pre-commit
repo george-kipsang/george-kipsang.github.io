@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Simple pre-commit hook to scan staged files for common secret patterns.
+# Place this file in `.githooks/pre-commit` and enable with:
+#   git config core.hooksPath .githooks
+# Then make it executable: `chmod +x .githooks/pre-commit`
+
+PATTERNS=(
+  "ghp_[A-Za-z0-9_]\{20,\}"
+  "GH_TOKEN"
+  "GITHUB_TOKEN"
+  "aws_secret_access_key"
+  "AKIA[0-9A-Z]{16}"
+  "-----BEGIN PRIVATE KEY-----"
+  "PRIVATE_KEY"
+  "SECRET"
+)
+
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+if [ -z "${STAGED_FILES}" ]; then
+  exit 0
+fi
+
+EXIT_CODE=0
+for FILE in ${STAGED_FILES}; do
+  # Get file content as staged
+  if git show :"${FILE}" >/dev/null 2>&1; then
+    CONTENT=$(git show :"${FILE}" 2>/dev/null || true)
+  else
+    # fallback: read working tree file
+    CONTENT=$(cat "${FILE}" 2>/dev/null || true)
+  fi
+
+  for P in "${PATTERNS[@]}"; do
+    if echo "${CONTENT}" | grep -Ei "${P}" >/dev/null; then
+      echo "[pre-commit] Potential secret found in ${FILE}: pattern ${P}"
+      EXIT_CODE=1
+    fi
+  done
+done
+
+if [ ${EXIT_CODE} -ne 0 ]; then
+  echo "\nCommit aborted: potential secrets detected in staged files. Remove them or unstage the files and try again."
+  exit ${EXIT_CODE}
+fi
+
+exit 0

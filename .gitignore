@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+key
+
+# Shell history (user requested entry)
+~/.zsh_history
+
+# MkDocs/site build
+site/
+
+# Node modules
+node_modules/
+
+# Backup / misc
+*.bak
+*.swp
+
