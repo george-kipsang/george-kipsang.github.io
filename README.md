@@ -2,7 +2,7 @@
 
 This is the repository for my GitHub Pages website, hosted at:
 
-👉 https://george-kipsang.github.io
+👉 https://g-kip.github.io
 
 The site contains:
 - Cybersecurity writeups (TryHackMe, HTB, VulnHub, etc.)
